@@ -1,0 +1,9 @@
+{
+	"file_types": {
+		"Tera (HTML)": ["*.html.tera"],
+		"Tera (CSS)": ["*.css.tera"],
+		"Tera (JSON)": ["*.json.tera"],
+		"Tera (YAML)": ["*.yaml.tera"],
+		"Tera (TOML)": ["*.toml.tera"]
+	}
+}
