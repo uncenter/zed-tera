@@ -1,7 +1,7 @@
 id = "tera"
 name = "Tera"
 description = "Tera support."
-version = "0.0.1"
+version = "1.1.0"
 schema_version = 1
 authors = ["uncenter"]
 repository = "https://github.com/uncenter/zed-tera"
