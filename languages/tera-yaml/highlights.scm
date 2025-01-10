@@ -1,4 +1,4 @@
-; Syntax highlighting scopes for Helix: https://docs.helix-editor.com/themes.html.
+; Syntax highlighting scopes for Zed: https://zed.dev/docs/extensions/languages#syntax-highlighting.
 
 ; Variables
 ;----------

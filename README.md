@@ -3,7 +3,7 @@
 [Zed](https://github.com/zed-industries/zed) extension for the [Tera](https://keats.github.io/tera/) templating language.
 
 > [!TIP]
-> *For Visual Studio Code support, see [uncenter/vscode-tera](https://github.com/uncenter/vscode-tera). For Helix and Neovim support, see [uncenter/tree-sitter-tera](https://github.com/uncenter/tree-sitter-tera).*
+> For Visual Studio Code support, see [uncenter/vscode-tera](https://github.com/uncenter/vscode-tera). For Helix and Neovim support, see [uncenter/tree-sitter-tera](https://github.com/uncenter/tree-sitter-tera).
 
 ![Screenshot of highlighted sample Tera code in Zed with the zed-tera extension installed](./assets/preview.png)
 
@@ -15,31 +15,20 @@ Open `zed: extensions` in the [command palette](https://zed.dev/docs/getting-sta
 
 ### Embedded/injected Language Support
 
-If you would like syntax highlighting for the content around the Tera templating logic, you'll need to add the following (for each desired language, assuming it is supported[^1]) to your [Zed settings file](https://zed.dev/docs/configuring-zed#settings-files):
+If you would like syntax highlighting for the content around the Tera templating logic, open the language selector for the current Tera file with `language selector: toggle` (or <kbd>Command</kbd>+<kbd>K</kbd>+<kbd>M</kbd>), and type in "Tera". Along with the default "Tera" language, you'll see a few other options for each supported language[^1] in the format of `Tera (<language>)`. Select your desired language combination to enable it for the current file.
+
+If you work in a project with multiple Tera templates with non-`.tera` file extensions (such as `.html`/`.css` website templates with Tera syntax), you can add something like the following to the `.zed/settings.json` file in your project.
 
 ```json
-  "file_types": {
-    "Tera (<language>)": [
-      "*.<extension>.tera"
-    ]
-  },
+{
+	"file_types": {
+		"Tera (HTML)": ["html"]
+	}
+}
 ```
-
-...where `<language>` is the proper name of the language, and `<extension>` is the respective file extension. For example, for HTML:
-
-```json
-  "file_types": {
-    "Tera (HTML)": [
-      "*.html.tera"
-    ]
-  },
-```
-
-> [!TIP]
-> See [`examples/all-languages.json`](./examples/all-languages.json) for a complete settings file containing the `file_types` setting for all supported languages.
 
 ## License
 
 [MIT](LICENSE)
 
-[^1]: Supported languages: HTML, CSS, JSON, YAML, and TOML. Open an issue to request additional language support - dynamic language injection is currently not supported.
+[^1]: Supported languages: HTML, CSS, JSON, YAML, and TOML. Open an issue to request additional language support. Dynamic language injection (auto-detection or similar) is currently not supported.
