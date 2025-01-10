@@ -15,7 +15,23 @@ Open `zed: extensions` in the [command palette](https://zed.dev/docs/getting-sta
 
 ### Embedded/injected Language Support
 
+#### Set content highlighting for current file
+
 If you would like syntax highlighting for the content around the Tera templating logic, open the language selector for the current Tera file with `language selector: toggle` (or <kbd>Command</kbd>+<kbd>K</kbd>+<kbd>M</kbd>), and type in "Tera". Along with the default "Tera" language, you'll see a few other options for each supported language[^1] in the format of `Tera (<language>)`. Select your desired language combination to enable it for the current file.
+
+#### Default to HTML highlighting of content
+
+If you want all `.tera` files to highlight surrounding content as HTML, you can add the following to your project or user config:
+
+```json
+{
+	"file_types": {
+		"Tera (HTML)": ["tera"]
+	}
+}
+```
+
+#### Use a different file extension with Tera syntax highlighting
 
 If you work in a project with multiple Tera templates with non-`.tera` file extensions (such as `.html`/`.css` website templates with Tera syntax), you can add something like the following to the `.zed/settings.json` file in your project.
 
