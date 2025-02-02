@@ -15,9 +15,19 @@ Open `zed: extensions` in the [command palette](https://zed.dev/docs/getting-sta
 
 ### Embedded/injected Language Support
 
-#### Set content highlighting for current file
+I suggest adding the following to either your user or project `settings.json` to automatically apply injected language highlighting for Tera files with different extensions. Zed unfortunately does not allow extensions like this one set the language for files with multiple extensions[^1], so this is the best workaround for now.
 
-If you would like syntax highlighting for the content around the Tera templating logic, open the language selector for the current Tera file with `language selector: toggle` (or <kbd>Command</kbd>+<kbd>K</kbd>+<kbd>M</kbd>), and type in "Tera". Along with the default "Tera" language, you'll see a few other options for each supported language[^1] in the format of `Tera (<language>)`. Select your desired language combination to enable it for the current file.
+```json
+{
+	"file_types": {
+		"Tera (CSS)": ["*.css.tera"],
+		"Tera (HTML)": ["*.html.tera"],
+		"Tera (JSON)": ["*.json.tera"],
+		"Tera (TOML)": ["*.toml.tera"],
+		"Tera (YAML)": ["*.yaml.tera"]
+	}
+}
+```
 
 #### Default to HTML highlighting of content
 
@@ -33,7 +43,7 @@ If you want all `.tera` files to highlight surrounding content as HTML, you can 
 
 #### Use a different file extension with Tera syntax highlighting
 
-If you work in a project with multiple Tera templates with non-`.tera` file extensions (such as `.html`/`.css` website templates with Tera syntax), you can add something like the following to the `.zed/settings.json` file in your project.
+If you work in a project with multiple Tera templates with non-`.tera` file extensions (such as `.html`/`.css` templates using Tera syntax), you can add something like the following to the `.zed/settings.json` file in your project.
 
 ```json
 {
@@ -47,4 +57,4 @@ If you work in a project with multiple Tera templates with non-`.tera` file exte
 
 [MIT](LICENSE)
 
-[^1]: Supported languages: HTML, CSS, JSON, YAML, and TOML. Open an issue to request additional language support. Dynamic language injection (auto-detection or similar) is currently not supported.
+[^1]: See [zed-industries/zed#10997](https://github.com/zed-industries/zed/issues/10997).
