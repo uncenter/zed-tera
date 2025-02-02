@@ -23,7 +23,7 @@
 
 (bool) @constant.builtin
 
-(number) @constant.numeric
+(number) @number
 
 ; Tokens
 ;-----------
