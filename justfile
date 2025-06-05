@@ -24,7 +24,7 @@ update: clean
     cp ./template/injections.scm "$TARGET_DIR/"
     if [[ -n "$LANGUAGE" ]]; then
       sed "s/<lang>/$LANGUAGE/g" ./template/injections/content-manual.scm >> "$TARGET_DIR/injections.scm"
-      cat ./template/config.toml | sed "s/name = \"Tera\"/name = \"Tera ($UP_LANG)\"/" ./template/config.toml > "$TARGET_DIR/config.toml"
+      cat ./template/config.toml | sed "s/name = \"Tera\"/name = \"Tera ($UP_LANG)\"/" ./template/config.toml | sed "s/path_suffixes = \[\]/path_suffixes = \[\"$LANGUAGE.tera\"\]/" > "$TARGET_DIR/config.toml"
     else
       sed 's/path_suffixes = \[\]/path_suffixes = \["tera"\]/' ./template/config.toml > "$TARGET_DIR/config.toml"
     fi
