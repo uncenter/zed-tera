@@ -1,0 +1,8 @@
+[{{ id }}]
+{%- for field, value in obj %}
+{{ field }} = "{{ value | upper | replace(" ", "_") }}"
+{%- endfor %}
+
+[directory]
+truncation_length = 4
+style = "bold lavender"

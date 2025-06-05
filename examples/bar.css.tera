@@ -1,0 +1,9 @@
+:root {
+  {% for color in colors %}
+    --color-{{ color }}: #{{ color }};
+  {% endfor %}
+}
+
+.{{ class }} {
+  background-color: #{{ background }};
+}

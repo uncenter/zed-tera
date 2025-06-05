@@ -1,0 +1,8 @@
+{
+  "name": "{{ title }}",
+  "comment": "Soothing pastel theme for Tilix",
+  "background-color": "#{{ bg }}",
+  "foreground-color": "#{{ fg }}",
+  "use-badge-color": false,
+  "use-bold-color": {{ bold }}
+}
