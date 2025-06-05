@@ -15,46 +15,34 @@ Open `zed: extensions` in the [command palette](https://zed.dev/docs/getting-sta
 
 ### Embedded/injected Language Support
 
-I suggest adding the following to either your user or project `settings.json` to automatically apply injected language highlighting for Tera files with different extensions. Zed unfortunately does not allow extensions like this one set the language for files with multiple extensions[^1], so this is the best workaround for now.
-
-```json
-{
-	"file_types": {
-		"Tera (CSS)": ["*.css.tera"],
-		"Tera (HTML)": ["*.html.tera"],
-		"Tera (JSON)": ["*.json.tera"],
-		"Tera (TOML)": ["*.toml.tera"],
-		"Tera (YAML)": ["*.yaml.tera"]
-	}
-}
-```
+This extension automatically injects highlighting for "content" within Tera files based on the file extension. To highlight a Tera template for JSON, use the `*.json.tera` extension. Similarly, you can use `*.css.tera`, `*.html.tera`, `*.toml.tera`, and `*.yaml.tera` for CSS, HTML, TOML, and YAML respectively (please open an issue if you need support for another language).
 
 #### Default to HTML highlighting of content
 
-If you want all `.tera` files to highlight surrounding content as HTML, you can add the following to your project or user config:
+If you want all `.tera` files to highlight surrounding content as HTML (without having to use the `.html.tera` extension), you can add the following to your project or user config:
 
 ```json
 {
-	"file_types": {
-		"Tera (HTML)": ["tera"]
-	}
+  "file_types": {
+    "Tera (HTML)": ["tera"]
+  }
 }
 ```
 
 #### Use a different file extension with Tera syntax highlighting
 
-If you work in a project with multiple Tera templates with non-`.tera` file extensions (such as `.html`/`.css` templates using Tera syntax), you can add something like the following to the `.zed/settings.json` file in your project.
+If you work in a project with Tera templates that don't use the `.tera` file extension (such as `.html` files using Tera syntax), consider adding the following to the `.zed/settings.json` file in your project.
 
 ```json
 {
-	"file_types": {
-		"Tera (HTML)": ["html"]
-	}
+  "file_types": {
+    "Tera (HTML)": ["html"]
+  }
 }
 ```
+
+This sets the file type for `.html` files to `Tera (HTML)`, which will highlight the content as HTML.
 
 ## License
 
 [MIT](LICENSE)
-
-[^1]: See [zed-industries/zed#10997](https://github.com/zed-industries/zed/issues/10997).
