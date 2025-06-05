@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/uncenter/zed-tera/compare/v1.1.0...v1.2.0) (2025-06-05)
+
+
+### Features
+
+* generate language variants with appropriate path suffixes ([657202f](https://github.com/uncenter/zed-tera/commit/657202fb7b61e0e0d2d77191edc814817e584889))
+
 ## [1.1.0](https://github.com/uncenter/zed-tera/compare/v1.0.0...v1.1.0) (2025-01-10)
 
 
