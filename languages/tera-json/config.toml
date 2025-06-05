@@ -1,6 +1,6 @@
 name = "Tera (JSON)"
 grammar = "tera"
-path_suffixes = []
+path_suffixes = ["json.tera"]
 brackets = [
     { start = "{%", end = "%}", close = true, newline = true },
     { start = "{{", end = "}}", close = true, newline = true },

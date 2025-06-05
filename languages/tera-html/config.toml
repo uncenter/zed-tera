@@ -1,6 +1,6 @@
 name = "Tera (HTML)"
 grammar = "tera"
-path_suffixes = []
+path_suffixes = ["html.tera"]
 brackets = [
     { start = "{%", end = "%}", close = true, newline = true },
     { start = "{{", end = "}}", close = true, newline = true },
