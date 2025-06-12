@@ -9,11 +9,15 @@
 
 _Zed with zed-tera. Screenshot taken with the [catppuccin/zed](https://github.com/catppuccin/zed) theme._
 
+## Installation
+
+1. Open `zed: extensions` in the [command palette](https://zed.dev/docs/getting-started#command-palette) (<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd>).
+2. Search for the "Tera" extension.
+3. Click install.
+
 ## Usage
 
-Open `zed: extensions` in the [command palette](https://zed.dev/docs/getting-started#command-palette), and search for the "Tera" extension.
-
-### Embedded/injected Language Support
+### Embedded/injected language support
 
 This extension automatically injects highlighting for "content" within Tera files based on the file extension. To highlight a Tera template for JSON, use the `*.json.tera` extension. Similarly, you can use `*.css.tera`, `*.html.tera`, `*.toml.tera`, and `*.yaml.tera` for CSS, HTML, TOML, and YAML respectively (please open an issue if you need support for another language).
 
