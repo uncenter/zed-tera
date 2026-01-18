@@ -22,7 +22,7 @@ _Zed with zed-tera. Screenshot taken with the [catppuccin/zed](https://github.co
 
 ### Embedded/injected language support
 
-This extension automatically injects highlighting for "content" within Tera files based on the file extension. To highlight a Tera template for JSON, use the `*.json.tera` extension. Similarly, you can use `*.css.tera`, `*.html.tera`, `*.toml.tera`, and `*.yaml.tera` for CSS, HTML, TOML, and YAML respectively (please open an issue if you need support for another language).
+This extension automatically injects highlighting for "content" within Tera files based on the file extension. To highlight a Tera template for JSON, use the `*.json.tera` extension. Similarly, you can use `*.css.tera`, `*.html.tera`, `*.toml.tera`, `*.yaml.tera`, and `*.xml.tera` for CSS, HTML, TOML, YAML, and XML respectively (please open an issue if you need support for another language).
 
 #### Default to HTML highlighting of content
 

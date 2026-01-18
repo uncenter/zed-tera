@@ -6,7 +6,7 @@ clean:
 
 update: clean
   #!/usr/bin/env bash
-  LANGUAGES=("html" "css" "json" "yaml" "toml" "")
+  LANGUAGES=("html" "css" "json" "yaml" "toml" "xml" "")
 
   for LANGUAGE in "${LANGUAGES[@]}"; do
     UP_LANG=$(echo "$LANGUAGE" | tr '[:lower:]' '[:upper:]');
