@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/uncenter/zed-tera/compare/v1.2.0...v1.3.0) (2026-01-18)
+
+
+### Features
+
+* add tera (xml) language variant ([d6d35e7](https://github.com/uncenter/zed-tera/commit/d6d35e7d4c263570e63ffb856db4b8ea144b74ce))
+
 ## [1.2.0](https://github.com/uncenter/zed-tera/compare/v1.1.0...v1.2.0) (2025-06-05)
 
 
