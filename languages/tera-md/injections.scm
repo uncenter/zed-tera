@@ -1,0 +1,7 @@
+(frontmatter (content) @content
+  (#set! language "yaml")
+  (#set! combined)
+)
+((content) @content
+  (#set! language "md")
+  (#set! combined))
