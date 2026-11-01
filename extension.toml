@@ -8,4 +8,4 @@ repository = "https://github.com/uncenter/zed-tera"
 
 [grammars.tera]
 repository = "https://github.com/uncenter/tree-sitter-tera"
-commit = "e8d679a29c03e64656463a892a30da626e19ed8e"
+commit = "0fbf4b9a3cb2db43bdf72a7cdd43a220ca4752c2"
