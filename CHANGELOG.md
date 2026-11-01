@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/uncenter/zed-tera/compare/v1.3.1...v1.3.2) (2026-11-01)
+
+
+### Bug Fixes
+
+* update tera grammar to v0.1.3 ([2953941](https://github.com/uncenter/zed-tera/commit/29539410362bde199984dd19c0263bd8a933c997))
+
 ## [1.3.1](https://github.com/uncenter/zed-tera/compare/v1.3.0...v1.3.1) (2026-11-01)
 
 
