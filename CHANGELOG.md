@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.3](https://github.com/uncenter/zed-tera/compare/v1.3.2...v1.3.3) (2026-11-01)
+
+
+### Bug Fixes
+
+* remove bracket matching for comment tokens ([787acf6](https://github.com/uncenter/zed-tera/commit/787acf6a4101125ca16e4c53a184e09a7ccc9ee5))
+
 ## [1.3.2](https://github.com/uncenter/zed-tera/compare/v1.3.1...v1.3.2) (2026-11-01)
 
 
