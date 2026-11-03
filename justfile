@@ -4,17 +4,27 @@ _default:
 clean:
   rm -rf languages/
 
-update: clean
+generate: clean
   #!/usr/bin/env bash
-  LANGUAGES=("html" "css" "json" "yaml" "toml" "xml" "")
+  # <identifier>:<display name>
+  LANGUAGES=(
+    "html:HTML"
+    "css:CSS"
+    "json:JSON"
+    "yaml:YAML"
+    "toml:TOML"
+    "xml:XML"
+    "" # plain tera
+  )
 
-  for LANGUAGE in "${LANGUAGES[@]}"; do
-    UP_LANG=$(echo "$LANGUAGE" | tr '[:lower:]' '[:upper:]');
+  for ENTRY in "${LANGUAGES[@]}"; do
+    IDENTIFIER="${ENTRY%%:*}"
+    DISPLAY_NAME="${ENTRY#*:}"
 
-    if [[ -z "$LANGUAGE" ]]; then
+    if [[ -z "$IDENTIFIER" ]]; then
       TARGET_DIR="languages/tera"
     else
-      TARGET_DIR="languages/tera-$LANGUAGE"
+      TARGET_DIR="languages/tera-$IDENTIFIER"
     fi
 
     mkdir -p "$TARGET_DIR"
@@ -22,9 +32,11 @@ update: clean
     cp ./template/brackets.scm "$TARGET_DIR/"
     cp ./template/highlights.scm "$TARGET_DIR/"
     cp ./template/injections.scm "$TARGET_DIR/"
-    if [[ -n "$LANGUAGE" ]]; then
-      sed "s/<lang>/$LANGUAGE/g" ./template/injections/content-manual.scm >> "$TARGET_DIR/injections.scm"
-      cat ./template/config.toml | sed "s/name = \"Tera\"/name = \"Tera ($UP_LANG)\"/" ./template/config.toml | sed "s/path_suffixes = \[\]/path_suffixes = \[\"$LANGUAGE.tera\"\]/" > "$TARGET_DIR/config.toml"
+    if [[ -n "$IDENTIFIER" ]]; then
+      sed "s/<lang>/$IDENTIFIER/g" ./template/injections/content-manual.scm >> "$TARGET_DIR/injections.scm"
+      sed -e "s|name = \"Tera\"|name = \"Tera ($DISPLAY_NAME)\"|" \
+          -e "s|path_suffixes = \[\]|path_suffixes = [\"$IDENTIFIER.tera\"]|" \
+          ./template/config.toml > "$TARGET_DIR/config.toml"
     else
       sed 's/path_suffixes = \[\]/path_suffixes = \["tera"\]/' ./template/config.toml > "$TARGET_DIR/config.toml"
     fi
