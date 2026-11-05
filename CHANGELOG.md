@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/uncenter/zed-tera/compare/v1.3.3...v1.4.0) (2026-11-05)
+
+
+### Features
+
+* add markdown language variant ([#13](https://github.com/uncenter/zed-tera/issues/13)) ([4d46d8c](https://github.com/uncenter/zed-tera/commit/4d46d8c89c40feba0289726378e4184777fb22ce))
+
 ## [1.3.3](https://github.com/uncenter/zed-tera/compare/v1.3.2...v1.3.3) (2026-11-01)
 
 
