@@ -14,6 +14,7 @@ generate: clean
     "yaml:YAML"
     "toml:TOML"
     "xml:XML"
+    "md:Markdown"
     "" # plain tera
   )
 
